@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5F6368;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    margin: 1em;
+}
+
+li {
+    display: inline;
+    padding: 0 1em;
+    font-size: .9em;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: 1px solid #f2f2f2;
+    padding: .7em 1em;
+    border-radius: 2px;
+    color: #5F6368;
+    background-color: #f2f2f2;
+    font-size: 1em;
+    margin-right: 1em;
+}
+
+.btn-grey:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+
+input {
+    width: 500px;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 40px;
+    border: 1px solid #d8d8d8;
+    outline: none;
+}
+
+input:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.btn-blue {
+    color: #fff;
+    font-weight: 700;
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+    background: linear-gradient(top, #4387fd, #4683ea);
+}
+
+
+.grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "head"
+    "main"
+    "foot";
+}
+
+#main_header {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search_section {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_footer {
+    grid-area: foot;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+.search_container {
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Search Page Styles */
+
+.search_grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+    "brand search"
+    ". main";
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    padding: 1em;
+}
+
+.search_grid .brand {
+    grid-area: brand;
+    background-color: lime;
+}
+
+.search_grid .search_controls {
+    grid-area: search;
+    background-color: tomato;
+}
